@@ -716,3 +716,17 @@ body.theme-none #restart-button {
   box-sizing: border-box;
   margin-bottom: 15px;
 }
+
+/* 曲を必ず1列にする */
+#song-list {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+#song-list .qualifier-card {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 15px !important;
+}
