@@ -722,11 +722,12 @@ body.theme-none #restart-button {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
+  gap: 15px !important;
 }
 
 #song-list .qualifier-card {
   display: block !important;
   width: 100% !important;
   box-sizing: border-box !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 0 !important;
 }
