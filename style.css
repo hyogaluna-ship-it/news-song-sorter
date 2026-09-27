@@ -745,3 +745,198 @@ body.theme-none #restart-button {
   }
 
 }
+/* =================================
+   スマホ表示：全体を4倍
+================================= */
+
+@media (max-width: 500px) {
+
+  /* 全体 */
+  .container {
+    width: 96%;
+    max-width: none;
+    padding: 40px 0 100px;
+  }
+
+  /* タイトル */
+  h1 {
+    margin-bottom: 40px !important;
+    font-size: 128px !important;
+    line-height: 1.2;
+  }
+
+  /* 見出し */
+  h2 {
+    margin-bottom: 40px !important;
+    font-size: 96px !important;
+    line-height: 1.2;
+  }
+
+
+  /* ================================
+     誰担選択
+  ================================= */
+
+  .member-buttons {
+    gap: 48px !important;
+    margin-top: 40px !important;
+  }
+
+  .member-button {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 240px !important;
+    padding: 48px 32px !important;
+
+    border-radius: 48px !important;
+
+    font-size: 64px !important;
+    line-height: 1.3;
+  }
+
+
+  /* ================================
+     予選
+  ================================= */
+
+  #song-list {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+
+    gap: 60px !important;
+
+    margin: 100px auto !important;
+  }
+
+
+  /* 楽曲ボタン本体 */
+  .qualifier-card {
+    width: 100% !important;
+
+    min-height: 240px !important;
+
+    padding: 40px !important;
+
+    border-width: 12px !important;
+    border-radius: 60px !important;
+  }
+
+
+  /* ★実際の楽曲名 */
+  .song-name {
+    display: block;
+
+    width: 100%;
+
+    font-size: 64px !important;
+    line-height: 1.4;
+
+    font-weight: bold;
+
+    word-break: break-word;
+  }
+
+
+  /* ================================
+     前へ・次へ・本選へ
+  ================================= */
+
+  .navigation-buttons {
+    gap: 48px !important;
+  }
+
+  .navigation-buttons button {
+    width: 320px !important;
+    height: 192px !important;
+
+    border-radius: 96px !important;
+
+    font-size: 68px !important;
+  }
+
+
+  #next-button,
+  #prev-button,
+  #restart-button {
+    padding: 48px 140px !important;
+
+    border-radius: 100px !important;
+
+    font-size: 68px !important;
+  }
+
+
+  /* 予選進捗 */
+  #qualifier-progress {
+    margin-top: 60px !important;
+    font-size: 60px !important;
+  }
+
+
+  /* ================================
+     本選
+  ================================= */
+
+  .comparison {
+    gap: 40px !important;
+    margin-top: 80px !important;
+  }
+
+  .song-card {
+    width: 44% !important;
+    max-width: none !important;
+
+    padding: 40px !important;
+
+    border-radius: 60px !important;
+  }
+
+  .song-card span {
+    margin-top: 40px !important;
+    font-size: 68px !important;
+    line-height: 1.4;
+  }
+
+  .vs {
+    font-size: 80px !important;
+  }
+
+  #final-progress {
+    margin-top: 60px !important;
+    font-size: 60px !important;
+  }
+
+
+  /* ================================
+     結果
+  ================================= */
+
+  #result-list {
+    margin: 100px 0 !important;
+  }
+
+  .result-item {
+    gap: 40px !important;
+
+    margin-bottom: 48px !important;
+    padding: 40px !important;
+
+    border-radius: 48px !important;
+  }
+
+  .result-number {
+    font-size: 64px !important;
+    font-weight: bold;
+  }
+
+  .result-song {
+    font-size: 64px !important;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .result-note {
+    font-size: 48px !important;
+    line-height: 1.5;
+  }
+}
