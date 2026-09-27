@@ -1,75 +1,67 @@
-/* =================================
-   全体
-================================= */
-
 * {
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   min-height: 100%;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
   background: #f8f1f7;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, sans-serif;
   color: #333;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    YuGothic,
+    sans-serif;
 }
 
-
-/* =================================
-   各画面の共通レイアウト
-================================= */
+/* ================================
+   各画面
+================================ */
 
 #member-select,
 #qualifier,
 #final,
 #result {
-  width: min(94vw, 600px);
+  width: 92vw;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 18px 0 24px;
+  padding: 8px 0 12px;
 }
 
-
-/* =================================
+/* ================================
    タイトル
-================================= */
+================================ */
 
 h1 {
-  width: 100%;
-  margin: 8px 0 22px;
+  margin: 4px 0 12px;
   text-align: center;
-  font-size: clamp(24px, 7vw, 38px);
+  font-size: 25px;
   line-height: 1.25;
-  font-weight: 800;
-  letter-spacing: 0.02em;
 }
 
-
-/* =================================
-   見出し
-================================= */
-
 h2 {
-  margin: 10px 0 18px;
+  margin: 6px 0 10px;
   text-align: center;
-  font-size: clamp(20px, 5.5vw, 30px);
-  line-height: 1.3;
+  font-size: 20px;
 }
 
 h3 {
-  margin: 12px 0;
-  font-size: 18px;
+  margin: 8px 0;
+  font-size: 17px;
 }
 
-
-/* =================================
-   共通ボタン
-================================= */
+/* ================================
+   ボタン
+================================ */
 
 button {
   font-family: inherit;
@@ -81,143 +73,127 @@ button:active {
   transform: scale(0.97);
 }
 
-
-/* =================================
+/* ================================
    誰担選択
-================================= */
+================================ */
 
 #member-select button {
   display: block;
   width: 100%;
-  min-height: 58px;
-  margin: 10px 0;
-  padding: 10px 16px;
+  min-height: 48px;
+  margin: 7px 0;
+  padding: 8px 14px;
   border: none;
-  border-radius: 14px;
-  font-size: clamp(17px, 4.5vw, 21px);
+  border-radius: 12px;
+  font-size: 17px;
   font-weight: 700;
 }
 
-
-/* =================================
-   予選
-================================= */
+/* ================================
+   楽曲一覧
+================================ */
 
 #song-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 6px;
   width: 100%;
-  margin: 16px auto 18px;
+  margin: 10px 0;
 }
 
-
-/* =================================
+/* ================================
    楽曲カード
-================================= */
+================================ */
 
 .qualifier-card {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 76px;
-  padding: 7px;
-  border: 3px solid transparent;
-  border-radius: 14px;
+  min-height: 58px;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 10px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-  transition: 0.15s;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
 }
 
-
-/* 選択状態 */
+/* 選択済み */
 
 .qualifier-card.selected {
   border-color: #e98bb5;
   background: #fff0f7;
 }
 
-
-/* =================================
+/* ================================
    チェックボックス
-================================= */
+================================ */
 
 .qualifier-card input {
   position: absolute;
   opacity: 0;
 }
 
-
-/* =================================
+/* ================================
    楽曲画像
-================================= */
+================================ */
 
 .qualifier-card img {
-  flex: 0 0 62px;
-  width: 62px;
-  height: 62px;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
   object-fit: cover;
-  border-radius: 9px;
+  border-radius: 7px;
 }
 
-
-/* =================================
+/* ================================
    曲名
-================================= */
+================================ */
 
 .qualifier-title {
   display: block;
   flex: 1;
   min-width: 0;
-  margin: 0 8px 0 12px;
+  margin-left: 9px;
+  font-size: 14px;
   font-weight: 700;
-  font-size: clamp(14px, 3.8vw, 17px);
-  line-height: 1.3;
+  line-height: 1.25;
   overflow-wrap: anywhere;
 }
 
-
-/* =================================
+/* ================================
    次へ・やり直す
-================================= */
+================================ */
 
 #next-button,
 #restart-button {
   display: block;
-  width: min(82vw, 360px);
-  min-height: 50px;
-  margin: 14px auto 0;
-  padding: 10px 22px;
+  width: 75%;
+  min-height: 44px;
+  margin: 8px auto 0;
+  padding: 8px 18px;
   border: none;
-  border-radius: 25px;
+  border-radius: 22px;
   background: #e98bb5;
-  color: white;
-  font-size: clamp(16px, 4.2vw, 19px);
+  color: #fff;
+  font-size: 16px;
   font-weight: 700;
 }
 
-#next-button:active,
-#restart-button:active {
-  transform: scale(0.96);
-}
-
-
-/* =================================
+/* ================================
    予選進行状況
-================================= */
+================================ */
 
 #qualifier-progress {
-  margin: 10px 0 0;
+  margin: 5px 0 0;
   text-align: center;
   color: #777;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-
-/* =================================
+/* ================================
    本選
-================================= */
+================================ */
 
 #final {
   text-align: center;
@@ -225,19 +201,18 @@ button:active {
 
 #final button {
   width: 100%;
-  min-height: 56px;
-  margin: 8px 0;
-  padding: 10px 14px;
+  min-height: 48px;
+  margin: 5px 0;
+  padding: 8px 12px;
   border: none;
-  border-radius: 13px;
-  font-size: 16px;
+  border-radius: 11px;
+  font-size: 15px;
   font-weight: 700;
 }
 
-
-/* =================================
+/* ================================
    結果
-================================= */
+================================ */
 
 #result {
   text-align: center;
@@ -245,142 +220,32 @@ button:active {
 
 #result ol {
   width: 100%;
-  margin: 15px auto;
-  padding-left: 30px;
+  margin: 10px auto;
+  padding-left: 28px;
   text-align: left;
 }
 
 #result li {
-  margin: 7px 0;
-  font-size: clamp(15px, 4vw, 18px);
-  line-height: 1.4;
+  margin: 5px 0;
+  font-size: 15px;
+  line-height: 1.35;
 }
 
-
-/* =================================
-   スマホ縦長画面
-================================= */
-
-@media (max-width: 480px) {
-
-  #member-select,
-  #qualifier,
-  #final,
-  #result {
-    width: 94vw;
-    padding-top: 12px;
-    padding-bottom: 18px;
-  }
-
-  h1 {
-    margin-top: 4px;
-    margin-bottom: 16px;
-    font-size: 27px;
-  }
-
-  #song-list {
-    gap: 8px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
-  .qualifier-card {
-    min-height: 70px;
-    padding: 5px;
-    border-width: 2px;
-  }
-
-  .qualifier-card img {
-    flex-basis: 58px;
-    width: 58px;
-    height: 58px;
-  }
-
-  .qualifier-title {
-    margin-left: 10px;
-    font-size: 14px;
-  }
-
-  #next-button,
-  #restart-button {
-    min-height: 48px;
-    margin-top: 10px;
-  }
-
-  #qualifier-progress {
-    margin-top: 7px;
-    font-size: 13px;
-  }
-}
-
-
-/* =================================
-   横向きスマホ
-================================= */
-
-@media (orientation: landscape) and (max-height: 600px) {
-
-  #member-select,
-  #qualifier,
-  #final,
-  #result {
-    padding-top: 8px;
-    padding-bottom: 10px;
-  }
-
-  h1 {
-    margin: 2px 0 10px;
-    font-size: 24px;
-  }
-
-  #song-list {
-    gap: 6px;
-    margin: 8px auto;
-  }
-
-  .qualifier-card {
-    min-height: 58px;
-    padding: 4px;
-  }
-
-  .qualifier-card img {
-    flex-basis: 48px;
-    width: 48px;
-    height: 48px;
-  }
-
-  .qualifier-title {
-    font-size: 13px;
-  }
-
-  #next-button,
-  #restart-button {
-    min-height: 42px;
-    margin-top: 6px;
-  }
-}
-
-
-/* =================================
-   大きな画面
-================================= */
+/* ================================
+   横長・大画面
+================================ */
 
 @media (min-width: 601px) {
-
   #member-select,
   #qualifier,
   #final,
   #result {
-    width: 600px;
-  }
-
-  .qualifier-card {
-    min-height: 82px;
+    width: 520px;
   }
 
   .qualifier-card img {
-    flex-basis: 68px;
-    width: 68px;
-    height: 68px;
+    flex-basis: 50px;
+    width: 50px;
+    height: 50px;
   }
 }
