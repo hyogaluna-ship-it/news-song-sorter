@@ -731,3 +731,14 @@ body.theme-none #restart-button {
   box-sizing: border-box !important;
   margin-bottom: 0 !important;
 }
+#song-list {
+  display: block !important;
+}
+
+#song-list > .qualifier-card {
+  display: block !important;
+  width: 100% !important;
+  float: none !important;
+  clear: both !important;
+  margin: 0 0 15px 0 !important;
+}
