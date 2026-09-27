@@ -776,3 +776,10 @@ body.theme-none #restart-button {
 body {
   zoom: 4;
 }
+/* 結果画像の保存案内 */
+.share-save-guide {
+  margin: 0 0 20px;
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
+}
