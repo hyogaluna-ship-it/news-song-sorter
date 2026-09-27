@@ -1,0 +1,572 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f8f1f7;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.container {
+  width: 94%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 0 50px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+
+/* 共通ボタン */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ====================
+   予選
+==================== */
+
+#song-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.qualifier-card {
+  position: relative;
+  padding: 10px;
+  border: 3px solid transparent;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  transition: 0.15s;
+}
+
+.qualifier-card.selected {
+  border-color: #e98bb5;
+  background: #fff0f7;
+}
+
+.qualifier-card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.qualifier-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.qualifier-title {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#next-button,
+#restart-button {
+  padding: 12px 35px;
+  border: none;
+  border-radius: 25px;
+  background: #e98bb5;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#next-button:active,
+#restart-button:active {
+  transform: scale(0.96);
+}
+
+#qualifier-progress {
+  margin-top: 15px;
+  color: #777;
+}
+
+
+/* ====================
+   本選
+==================== */
+
+.comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.song-card {
+  width: 42%;
+  max-width: 250px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.song-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.song-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.song-card:active {
+  transform: scale(0.95);
+}
+
+.vs {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#final-progress {
+  margin-top: 25px;
+  color: #777;
+}
+
+
+/* ====================
+   結果
+==================== */
+
+#result-list {
+  margin: 25px 0;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.result-rank {
+  width: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.result-item img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.result-title {
+  font-weight: bold;
+}
+
+
+/* ====================
+   スマホ
+==================== */
+
+@media (max-width: 500px) {
+
+  .container {
+    padding-top: 20px;
+  }
+
+  #song-list {
+    gap: 10px;
+  }
+
+  .qualifier-title {
+    font-size: 13px;
+  }
+
+  .comparison {
+    gap: 8px;
+  }
+
+  .song-card {
+    width: 44%;
+  }
+
+  .song-card span {
+    font-size: 14px;
+  }
+
+  .vs {
+    font-size: 16px;
+  }
+}
+
+
+/* 表示・非表示 */
+
+.hidden {
+  display: none;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.navigation-buttons button {
+  width: 160px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.navigation-buttons button {
+  border-radius: 24px;
+}
+
+#qualifier,
+#final,
+#result {
+  text-align: center;
+}
+
+.choice-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.hidden {
+  display: none;
+}
+
+#final {
+  text-align: center;
+}
+
+.choice-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.choice-button {
+  width: 100%;
+  max-width: 500px;
+  min-height: 60px;
+  margin: 10px auto;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  background: white;
+  color: #333;
+
+  font-size: 16px;
+  font-weight: normal;
+
+  padding: 12px 16px;
+}
+
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.member-button {
+  width: 100%;
+  max-width: 500px;
+  min-height: 60px;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: normal;
+
+  padding: 12px 16px;
+
+  text-align: center;
+
+  /* 色は個別に設定 */
+}
+
+
+/* 小山慶一郎 */
+
+.member-button[data-member="koyama"] {
+  background: #9b6bc3;
+  color: white;
+}
+
+
+/* 加藤シゲアキ */
+
+.member-button[data-member="kato"] {
+  background: #65ad70;
+  color: white;
+}
+
+
+/* 増田貴久 */
+
+.member-button[data-member="masuda"] {
+  background: #e3c64f;
+  color: white;
+}
+
+
+/* 選べない */
+
+.member-button[data-member="none"] {
+  background: white;
+  color: black;
+}
+
+  background: #eee5f7;
+}
+
+body.theme-koyama .member-button,
+body.theme-koyama .choice-button,
+body.theme-koyama #next-button,
+body.theme-koyama #prev-button,
+body.theme-koyama #restart-button {
+  background: #9b6bc3;
+}
+
+
+/* ================================
+   加藤シゲアキ
+================================ */
+
+body.theme-kato {
+  background: #e6f4e8;
+}
+
+body.theme-kato .member-button,
+body.theme-kato .choice-button,
+body.theme-kato #next-button,
+body.theme-kato #prev-button,
+body.theme-kato #restart-button {
+  background: #65ad70;
+}
+
+/* ================================
+   増田貴久
+================================ */
+
+body.theme-masuda {
+  background: #fff8d9;
+}
+
+body.theme-masuda .member-button,
+body.theme-masuda .choice-button,
+body.theme-masuda #next-button,
+body.theme-masuda #prev-button,
+body.theme-masuda #restart-button {
+  background: #e3c64f;
+}
+
+
+/* ================================
+   選べない
+================================ */
+
+body.theme-none {
+  background: #fff0f5;
+}
+
+body.theme-none .member-button,
+body.theme-none .choice-button,
+body.theme-none #next-button,
+body.theme-none #prev-button,
+body.theme-none #restart-button {
+  background: #f5a9c8;
+}
+
+/* 誰担選択画面の「選べない」だけ白 */
+
+#member-select .member-button[data-member="none"] {
+  background: white;
+  color: black;
+}
+
+#prev-button {
+  color: white;
+}
+
+/* =================================
+   結果画像用カード
+================================= */
+
+#share-card {
+  position: absolute;
+  left: -10000px;
+  top: 0;
+
+  width: 600px;
+  box-sizing: border-box;
+
+  padding: 45px 40px;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  background: #fff0f5;
+  color: #333;
+}
+
+
+/* タイトル */
+
+
+#share-card h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+#share-card h2 {
+  margin: 0 0 25px;
+  font-size: 25px;
+}
+
+
+/* メンバー名 */
+
+#share-member {
+  display: inline-block;
+
+  padding: 8px 22px;
+  margin-bottom: 20px;
+
+  border-radius: 30px;
+
+  background: #f5a9c8;
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* ランキング */
+
+.share-ranking-item {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 55px;
+
+  margin: 8px 0;
+  padding: 8px 15px;
+
+  box-sizing: border-box;
+
+  border-radius: 12px;
+
+  background: white;
+
+  text-align: left;
+}
+
+
+.share-ranking-number {
+  width: 55px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  text-align: center;
+}
+
+
+.share-ranking-title {
+  flex: 1;
+
+  font-size: 17px;
+
+  word-break: break-word;
+}
+
+
+/* フッター */
+
+.share-footer {
+  margin-top: 25px;
+
+  font-size: 13px;
+
+  opacity: 0.6;
+}
+
+
+/* =================================
+   画像保存・Xシェアボタン
+================================= */
+
+#save-image-button,
+#share-x-button {
+  display: block;
+
+  width: 100%;
+  max-width: 500px;
+
+  min-height: 50px;
+
+  margin: 12px auto;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  color: white;
+}
+
+#save-image-button {
+  background: #777;
+}
+
+#share-x-button {
+  background: #000;
+} 
