@@ -390,7 +390,6 @@ body.theme-koyama {
   background: #eee5f7;
 }
 
-body.theme-koyama .member-button,
 body.theme-koyama .choice-button,
 body.theme-koyama #next-button,
 body.theme-koyama #prev-button,
@@ -407,7 +406,6 @@ body.theme-kato {
   background: #e6f4e8;
 }
 
-body.theme-kato .member-button,
 body.theme-kato .choice-button,
 body.theme-kato #next-button,
 body.theme-kato #prev-button,
@@ -424,7 +422,6 @@ body.theme-masuda {
   background: #fff8d9;
 }
 
-body.theme-masuda .member-button,
 body.theme-masuda .choice-button,
 body.theme-masuda #next-button,
 body.theme-masuda #prev-button,
@@ -441,7 +438,6 @@ body.theme-none {
   background: #fff0f5;
 }
 
-body.theme-none .member-button,
 body.theme-none .choice-button,
 body.theme-none #next-button,
 body.theme-none #prev-button,
@@ -454,6 +450,115 @@ body.theme-none #restart-button {
 #member-select .member-button[data-member="none"] {
   background: white;
   color: black;
+}
+
+#prev-button {
+  color: white;
+}
+
+/* =================================
+   誰担選択画面
+================================= */
+
+#member-select {
+  text-align: center;
+}
+
+.member-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.member-button {
+  width: 100%;
+  max-width: 500px;
+  min-height: 60px;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #f5a9c8;
+  color: white;
+
+  font-size: 16px;
+  font-weight: normal;
+
+  padding: 12px 16px;
+
+  text-align: center;
+}
+
+
+/* =================================
+   小山慶一郎
+================================= */
+
+body.theme-koyama {
+  background: #eee5f7;
+}
+
+body.theme-koyama .member-button,
+body.theme-koyama .choice-button,
+body.theme-koyama #next-button,
+body.theme-koyama #prev-button,
+body.theme-koyama #restart-button {
+  background: #9b6bc3;
+}
+
+
+/* =================================
+   加藤シゲアキ
+================================= */
+
+body.theme-kato {
+  background: #e6f4e8;
+}
+
+body.theme-kato .member-button,
+body.theme-kato .choice-button,
+body.theme-kato #next-button,
+body.theme-kato #prev-button,
+body.theme-kato #restart-button {
+  background: #65ad70;
+}
+
+
+/* =================================
+   増田貴久
+================================= */
+
+body.theme-masuda {
+  background: #fff8d9;
+}
+
+body.theme-masuda .member-button,
+body.theme-masuda .choice-button,
+body.theme-masuda #next-button,
+body.theme-masuda #prev-button,
+body.theme-masuda #restart-button {
+  background: #e3c64f;
+}
+
+
+/* =================================
+   選べない
+================================= */
+
+body.theme-none {
+  background: #fff0f5;
+}
+
+body.theme-none .member-button,
+body.theme-none .choice-button,
+body.theme-none #next-button,
+body.theme-none #prev-button,
+body.theme-none #restart-button {
+  background: #f5a9c8;
 }
 
 #prev-button {
