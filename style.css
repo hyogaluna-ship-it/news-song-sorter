@@ -706,45 +706,50 @@ body.theme-none #restart-button {
   background: #000;
 }
 
-/* 予選の曲を縦一列に表示 */
-#song-list {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 15px !important;
-}
+/* =================================
+   予選：楽曲ボタン
+================================= */
 
-#song-list > .qualifier-card {
-  width: 100% !important;
-  margin: 0 !important;
-}
 #song-list {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch !important;
-  width: 100% !important;
-}
-
-#song-list > label.qualifier-card {
-  display: block !important;
-  flex: none !important;
-  width: 100% !important;
-  margin: 0 0 15px 0 !important;
-}
-#qualifier h1 {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
   width: 100%;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 25px 0;
 }
 
-#song-list {
-  width: 100%;
-  max-width: 500px;
-  margin: 25px auto;
-}
-
+/* 楽曲ボタン */
 #song-list > .qualifier-card {
-  width: 100% !important;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* 曲名：現在の15px → 3倍の45px */
+#song-list .song-name {
+  display: block;
+  width: 100%;
+
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 1.15;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 「次の10曲へ」ボタンの文字を2/3サイズに */
+#next-button {
+  font-size: calc(17px * 0.6667);
 }
 
 /* タイトルと楽曲ボタンの幅を完全に統一 */
