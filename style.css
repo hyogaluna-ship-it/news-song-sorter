@@ -746,3 +746,23 @@ body.theme-none #restart-button {
 #song-list > .qualifier-card {
   width: 100% !important;
 }
+
+/* タイトルと楽曲ボタンの幅を完全に統一 */
+#qualifier h1 {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 10px 0 !important;
+  box-sizing: border-box !important;
+}
+
+#song-list {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 25px 0 !important;
+  box-sizing: border-box !important;
+}
+
+#song-list > .qualifier-card {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
