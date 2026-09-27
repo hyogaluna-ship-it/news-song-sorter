@@ -40,10 +40,14 @@ button {
 ==================== */
 
 #song-list {
-  display: grid;
-grid-template-columns: 1fr;
-  gap: 15px;
-  margin: 25px 0;
+    display: block;
+    margin: 25px 0;
+}
+
+#song-list .qualifier-card {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
 }
 
 .qualifier-card {
