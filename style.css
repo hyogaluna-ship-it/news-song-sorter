@@ -618,7 +618,7 @@ body.theme-none #restart-button {
   background: #f5a9c8;
   color: white;
 
-  font-size: 48px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -648,7 +648,7 @@ body.theme-none #restart-button {
 .share-ranking-number {
   width: 55px;
 
-  font-size: 20px;
+  font-size: 13px;
   font-weight: bold;
 
   text-align: center;
@@ -669,7 +669,7 @@ body.theme-none #restart-button {
 .share-footer {
   margin-top: 25px;
 
-  font-size: 35px;
+  font-size: 13px;
 
   opacity: 0.6;
 }
@@ -693,7 +693,7 @@ body.theme-none #restart-button {
   border: none;
   border-radius: 12px;
 
-  font-size: 40px;
+  font-size: 13px;
 
   color: white;
 }
@@ -739,7 +739,7 @@ body.theme-none #restart-button {
   display: block;
   width: 100%;
 
-  font-size: 25px;
+  font-size: 17px;
   font-weight: bold;
   line-height: 1.15;
 
