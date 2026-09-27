@@ -20,10 +20,12 @@ body {
 
 h1 {
   margin-bottom: 10px;
+  font-size: 28px;
 }
 
 h2 {
-  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 22px;
 }
 
 
@@ -41,7 +43,7 @@ button {
 
 #song-list {
   display: grid;
-  grid-template-columns: 320px;
+  grid-template-columns: minmax(0, 96vw);
   justify-content: center;
   gap: 15px;
   margin: 25px auto;
@@ -79,17 +81,17 @@ button {
   display: block;
   margin-top: 8px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 #next-button,
 #restart-button {
-  padding: 12px 35px;
+  padding: 15px 40px;
   border: none;
-  border-radius: 25px;
+  border-radius: 28px;
   background: #e98bb5;
   color: white;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: bold;
 }
 
