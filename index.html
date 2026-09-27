@@ -1,7 +1,39 @@
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="member-select">
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div id="member-select">
+  <h1>📰🎶NEWS楽曲ソート🎶📰</h1>
+
+  <h2>誰担ですか？</h2>
+
+  <div class="member-buttons">
+    <button class="member-button" data-member="koyama">
+      小山慶一郎
+    </button>
+
+    <button class="member-button" data-member="kato">
+      加藤シゲアキ
+    </button>
+
+    <button class="member-button" data-member="masuda">
+      増田貴久
+    </button>
+
+    <button class="member-button" data-member="none">
+      選べない
+    </button>
+  </div>
+</div>
+
+<div id="qualifier" class="hidden">
   <h1>📰🎶NEWS楽曲ソート🎶📰</h1>
 
   <h2>予選</h2>
@@ -13,17 +45,12 @@
   <div id="song-list"></div>
 
   <div class="navigation-buttons">
-
     <button id="prev-button">前の10曲へ</button>
-
     <button id="next-button">次の10曲へ</button>
-
   </div>
-
 </div>
 
 <div id="final" class="hidden">
-
   <h2>本選</h2>
 
   <p id="final-progress"></p>
@@ -31,9 +58,7 @@
   <p>どちらの曲が好きですか？</p>
 
   <button id="choice1" class="choice-button"></button>
-
   <button id="choice2" class="choice-button"></button>
-
 </div>
 
 <div id="result" class="hidden">
@@ -43,29 +68,22 @@
   <div id="result-list"></div>
 
   <button id="save-image-button">
-
     🖼️ 結果を画像で保存
-
   </button>
 
   <button id="share-x-button">
-
     𝕏 Xでシェア
-
   </button>
 
   <button id="restart-button">
-
     もう一度ソートする
-
   </button>
 
 </div>
 
+
 <!-- ================================
-
      画像として保存する結果カード
-
 ================================ -->
 
 <div id="share-card">
@@ -79,12 +97,14 @@
   <div id="share-ranking"></div>
 
   <p class="share-footer">
-
     My Favorite Songs
-
   </p>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-<script src="script.js"></script>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
