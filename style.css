@@ -41,7 +41,7 @@ button {
 
 #song-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 500px);
   gap: 15px;
   margin: 25px 0;
 }
