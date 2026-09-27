@@ -717,3 +717,16 @@ body.theme-none #restart-button {
   width: 100% !important;
   margin: 0 !important;
 }
+#song-list {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+}
+
+#song-list > label.qualifier-card {
+  display: block !important;
+  flex: none !important;
+  width: 100% !important;
+  margin: 0 0 15px 0 !important;
+}
