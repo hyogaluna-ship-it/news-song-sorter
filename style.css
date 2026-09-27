@@ -43,7 +43,9 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 500px);
   gap: 15px;
-  margin: 25px 0;
+  margin: 25px auto;
+  width: calc(100% - 30px);
+  max-width: 500px;
 }
 
 .qualifier-card {
