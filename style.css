@@ -766,7 +766,8 @@ body.theme-none #restart-button {
   width: 100% !important;
   box-sizing: border-box !important;
 }
+
 /* ページ全体を拡大 */
 body {
-  zoom: 1.5;
+  zoom: 4;
 }
