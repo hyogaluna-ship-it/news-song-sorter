@@ -10,194 +10,85 @@ body {
   color: #333;
 }
 
-.container {
-  width: 94%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 120px 0 200px;
-  text-align: center;
-}
-
 /* ====================
-   見出し
+   全体
 ==================== */
 
+#member-select,
+#qualifier,
+#final,
+#result {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
 h1 {
-  margin: 0 0 160px;
-  font-size: 112px;
+  width: 100%;
+  margin: 0 0 25px;
+  padding: 18px 5px;
+  text-align: center;
+  font-size: clamp(24px, 7vw, 36px);
+  line-height: 1.25;
 }
 
 h2 {
-  margin: 0 0 160px;
-  font-size: 88px;
+  margin: 10px 0 20px;
+  text-align: center;
+  font-size: 24px;
 }
 
-
 /* ====================
-   共通
+   共通ボタン
 ==================== */
 
 button {
   font-family: inherit;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
-
 
 /* ====================
    誰担選択
 ==================== */
 
-#member-select {
-  text-align: center;
-}
-
-.member-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  margin-top: 80px;
-}
-
-.member-button {
+#member-select button {
+  display: block;
   width: 100%;
-  max-width: 500px;
-  min-height: 240px;
-
+  min-height: 60px;
+  margin: 12px 0;
+  padding: 12px 15px;
   border: none;
-  border-radius: 48px;
-
-  font-size: 64px;
-  font-weight: normal;
-
-  padding: 48px 64px;
-
-  text-align: center;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
 }
-
-.member-button[data-member="koyama"] {
-  background: #9b6bc3;
-  color: white;
-}
-
-.member-button[data-member="kato"] {
-  background: #65ad70;
-  color: white;
-}
-
-.member-button[data-member="masuda"] {
-  background: #e3c64f;
-  color: white;
-}
-
-.member-button[data-member="none"] {
-  background: white;
-  color: black;
-}
-
-
-/* ====================
-   テーマ
-==================== */
-
-body.theme-koyama {
-  background: #eee5f7;
-}
-
-body.theme-koyama .member-button,
-body.theme-koyama .choice-button,
-body.theme-koyama #next-button,
-body.theme-koyama #prev-button,
-body.theme-koyama #restart-button {
-  background: #9b6bc3;
-  color: white;
-}
-
-
-body.theme-kato {
-  background: #e6f4e8;
-}
-
-body.theme-kato .member-button,
-body.theme-kato .choice-button,
-body.theme-kato #next-button,
-body.theme-kato #prev-button,
-body.theme-kato #restart-button {
-  background: #65ad70;
-  color: white;
-}
-
-
-body.theme-masuda {
-  background: #fff8d9;
-}
-
-body.theme-masuda .member-button,
-body.theme-masuda .choice-button,
-body.theme-masuda #next-button,
-body.theme-masuda #prev-button,
-body.theme-masuda #restart-button {
-  background: #e3c64f;
-  color: white;
-}
-
-
-body.theme-none {
-  background: #fff0f5;
-}
-
-body.theme-none .member-button,
-body.theme-none .choice-button,
-body.theme-none #next-button,
-body.theme-none #prev-button,
-body.theme-none #restart-button {
-  background: #f5a9c8;
-  color: white;
-}
-
-#member-select .member-button[data-member="none"] {
-  background: white;
-  color: black;
-}
-
 
 /* ====================
    予選
 ==================== */
 
-#qualifier {
-  text-align: center;
-}
-
 #song-list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-
+  grid-template-columns: minmax(0, 90vw);
+  justify-content: center;
+  gap: 10px;
   width: 100%;
-  margin: 120px auto;
+  margin: 15px auto;
 }
+
+/* 曲カード */
 
 .qualifier-card {
   position: relative;
-
   width: 100%;
-  min-height: 240px;
-
-  padding: 48px;
-
-  border: 12px solid transparent;
-  border-radius: 60px;
-
+  padding: 8px;
+  border: 3px solid transparent;
+  border-radius: 15px;
   background: white;
-
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   transition: 0.15s;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .qualifier-card.selected {
@@ -210,84 +101,61 @@ body.theme-none #restart-button {
   opacity: 0;
 }
 
-/*
-  実際のscript.jsでは
-  曲名は .song-name
-*/
+/* 曲画像 */
 
-.song-name {
+.qualifier-card img {
   display: block;
-
   width: 100%;
-
-  font-size: 64px;
-  font-weight: bold;
-
-  line-height: 1.3;
-
-  word-break: break-word;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
+/* 曲名 */
+
+.qualifier-title {
+  display: block;
+  margin-top: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.25;
+}
 
 /* ====================
-   予選ボタン
+   次へ・やり直し
 ==================== */
 
 #next-button,
-#prev-button,
 #restart-button {
-  width: 640px;
-  min-height: 192px;
-
-  padding: 48px 64px;
-
+  display: block;
+  width: 90%;
+  max-width: 320px;
+  min-height: 50px;
+  margin: 15px auto;
+  padding: 10px 20px;
   border: none;
-  border-radius: 100px;
-
-  font-size: 68px;
-  font-weight: bold;
-
+  border-radius: 25px;
+  background: #e98bb5;
   color: white;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #next-button:active,
-#prev-button:active,
 #restart-button:active {
   transform: scale(0.96);
 }
 
-#qualifier-progress {
-  margin-top: 120px;
-
-  color: #777;
-
-  font-size: 60px;
-}
-
-
 /* ====================
-   前へ・次へ
+   予選進行状況
 ==================== */
 
-.navigation-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 48px;
-
-  margin-top: 80px;
+#qualifier-progress {
+  margin-top: 10px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
 }
-
-.navigation-buttons button {
-  width: 640px;
-  height: 192px;
-
-  border-radius: 96px;
-
-  font-size: 68px;
-}
-
 
 /* ====================
    本選
@@ -297,99 +165,19 @@ body.theme-none #restart-button {
   text-align: center;
 }
 
-.comparison {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 60px;
-
-  margin-top: 140px;
-}
-
-.song-card {
-  width: 42%;
-  max-width: 250px;
-
-  padding: 40px;
-
+#final button {
+  width: 90%;
+  max-width: 400px;
+  min-height: 55px;
+  margin: 8px auto;
+  padding: 10px 15px;
   border: none;
-  border-radius: 60px;
-
+  border-radius: 12px;
   background: white;
-
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
-}
-
-.song-card img {
-  width: 100%;
-
-  aspect-ratio: 1 / 1;
-
-  object-fit: cover;
-
-  border-radius: 40px;
-}
-
-.song-card span {
-  display: block;
-
-  margin-top: 40px;
-
-  font-size: 68px;
-  font-weight: bold;
-
-  line-height: 1.3;
-}
-
-.song-card:active {
-  transform: scale(0.95);
-}
-
-.vs {
-  font-size: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  font-size: 16px;
   font-weight: bold;
 }
-
-#final-progress {
-  margin-top: 100px;
-
-  color: #777;
-
-  font-size: 64px;
-}
-
-
-/* ====================
-   選択ボタン
-==================== */
-
-.choice-button {
-  width: 100%;
-  max-width: 500px;
-
-  min-height: 240px;
-
-  margin: 40px auto;
-
-  padding: 48px 64px;
-
-  border: 1px solid #ddd;
-  border-radius: 48px;
-
-  background: white;
-  color: #333;
-
-  font-size: 64px;
-  font-weight: normal;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-}
-
 
 /* ====================
    結果
@@ -399,196 +187,76 @@ body.theme-none #restart-button {
   text-align: center;
 }
 
-#result-list {
-  margin: 100px 0;
-}
-
-.result-item {
-  display: flex;
-  align-items: center;
-
-  gap: 60px;
-
-  margin-bottom: 48px;
-
-  padding: 40px;
-
-  border-radius: 48px;
-
-  background: white;
-
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-
+#result ol {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding-left: 30px;
   text-align: left;
 }
 
-/*
-  実際のscript.jsで使われるクラス
-*/
-
-.result-number {
-  width: 160px;
-
-  flex-shrink: 0;
-
-  font-size: 64px;
-  font-weight: bold;
-
-  text-align: center;
-}
-
-.result-song {
-  flex: 1;
-
-  font-size: 64px;
-  font-weight: bold;
-
-  line-height: 1.3;
-
-  word-break: break-word;
-}
-
-.result-note {
-  margin-top: 48px;
-
-  font-size: 64px;
-
+#result li {
+  margin: 8px 0;
+  font-size: 16px;
   line-height: 1.4;
 }
 
-
 /* ====================
-   非表示
+   スマホ
 ==================== */
 
-.hidden {
-  display: none;
-}
+@media (max-width: 600px) {
 
+  #member-select,
+  #qualifier,
+  #final,
+  #result {
+    padding: 12px 10px;
+  }
 
-/* ====================
-   結果画像用カード
-   ※画面外なので通常表示サイズは維持
-==================== */
+  h1 {
+    margin-bottom: 15px;
+    padding: 12px 0;
+    font-size: 25px;
+  }
 
-#share-card {
-  position: absolute;
+  h2 {
+    margin-bottom: 12px;
+    font-size: 21px;
+  }
 
-  left: -10000px;
-  top: 0;
+  #song-list {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 10px auto;
+  }
 
-  width: 600px;
+  .qualifier-card {
+    padding: 6px;
+    border-width: 2px;
+    border-radius: 12px;
+  }
 
-  box-sizing: border-box;
+  .qualifier-card img {
+    height: 90px;
+    border-radius: 8px;
+  }
 
-  padding: 45px 40px;
+  .qualifier-title {
+    margin-top: 4px;
+    font-size: 13px;
+  }
 
-  text-align: center;
+  #next-button,
+  #restart-button {
+    min-height: 46px;
+    margin: 10px auto;
+    font-size: 16px;
+  }
 
-  border-radius: 24px;
-
-  background: #fff0f5;
-  color: #333;
-}
-
-#share-card h1 {
-  margin: 0 0 10px;
-  font-size: 30px;
-}
-
-#share-card h2 {
-  margin: 0 0 25px;
-  font-size: 25px;
-}
-
-#share-member {
-  display: inline-block;
-
-  padding: 8px 22px;
-  margin-bottom: 20px;
-
-  border-radius: 30px;
-
-  background: #f5a9c8;
-  color: white;
-
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.share-ranking-item {
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  min-height: 55px;
-
-  margin: 8px 0;
-  padding: 8px 15px;
-
-  border-radius: 12px;
-
-  background: white;
-
-  text-align: left;
-}
-
-.share-ranking-number {
-  width: 55px;
-
-  font-size: 20px;
-  font-weight: bold;
-
-  text-align: center;
-}
-
-.share-ranking-title {
-  flex: 1;
-
-  font-size: 17px;
-
-  word-break: break-word;
-}
-
-.share-footer {
-  margin-top: 25px;
-
-  font-size: 13px;
-
-  opacity: 0.6;
-}
-
-
-/* ====================
-   画像保存・Xシェア
-==================== */
-
-#save-image-button,
-#share-x-button {
-  display: block;
-
-  width: 100%;
-  max-width: 500px;
-
-  min-height: 200px;
-
-  margin: 48px auto;
-
-  border: none;
-  border-radius: 48px;
-
-  font-size: 64px;
-
-  color: white;
-}
-
-#save-image-button {
-  background: #777;
-}
-
-#share-x-button {
-  background: #000;
-}
-html {
-  zoom: 4;
+  #qualifier-progress {
+    margin-top: 8px;
+    font-size: 13px;
+  }
 }
