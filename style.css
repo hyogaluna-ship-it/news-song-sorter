@@ -701,3 +701,14 @@ body.theme-none #restart-button {
 #share-x-button {
   background: #000;
 }
+
+/* 楽曲ボタンを1列にする */
+#song-list {
+  display: block !important;
+}
+
+#song-list .qualifier-card {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
