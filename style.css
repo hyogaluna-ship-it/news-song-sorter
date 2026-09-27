@@ -57,7 +57,7 @@ button {
   background: white;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   transition: 0.15s;
-}
+  min-height: 240px;
 }
 
 .qualifier-card.selected {
