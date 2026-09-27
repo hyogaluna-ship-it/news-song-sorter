@@ -589,3 +589,6 @@ body.theme-none #restart-button {
 #share-x-button {
   background: #000;
 }
+html {
+  zoom: 4;
+}
