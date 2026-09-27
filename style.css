@@ -734,12 +734,12 @@ body.theme-none #restart-button {
   text-align: center;
 }
 
-/* 曲名：現在の15px → 1.5倍の25px */
+/* 曲名：現在の15px */
 #song-list .song-name {
   display: block;
   width: 100%;
 
-  font-size: 17px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1.15;
 
@@ -779,7 +779,7 @@ body {
 /* 結果画像の保存案内 */
 .share-save-guide {
   margin: 0 0 20px;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: normal;
   text-align: center;
 }
