@@ -1,1977 +1,1337 @@
-
-
 /* =================================
-
    曲データ
-
 ================================= */
 
 const songs = [
-
   {
-
     title: "NEWSニッポン",
-
   },
 
   {
-
     title: "ありがとう・今",
-
   },
 
   {
-
     title: "PrivateHearts",
-
   },
 
   {
-
     title: "希望〜Yell〜",
-
   },
 
   {
-
     title: "Stand Up",
-
   },
 
   {
-
     title: "GoodNews!",
-
   },
 
   {
-
     title: "LET'S GO TO THE PLANETS",
-
   },
 
   {
-
     title: "紅く燃ゆる太陽",
-
   },
 
   {
-
     title: "忘れないさ〜LIFE GOES ON〜",
-
   },
 
   {
-
     title: "DREAMS",
-
   },
 
   {
-
     title: "BEACH ANGEL",
-
   },
 
   {
-
     title: "きらめきの彼方へ",
-
   },
 
   {
-
     title: "I・ZA・NA・I・ZU・KI",
-
   },
 
   {
-
     title: "Say Hello",
-
   },
 
   {
-
     title: "柔らかなままで",
-
   },
 
   {
-
     title: "ずっと",
-
   },
 
   {
-
     title: "チェリッシュ",
-
   },
 
   {
-
     title: "PartyTime",
-
   },
 
   {
-
     title: "SHOCK ME",
-
   },
 
   {
-
     title: "Devil or Angel",
-
   },
 
   {
-
     title: "TEPPEN",
-
   },
 
   {
-
     title: "夢の数だけ愛が生まれる",
-
   },
 
   {
-
     title: "NANDE×2 DAME",
-
   },
 
   {
-
     title: "Fiesta",
-
   },
 
   {
-
     title: "サヤエンドウ",
-
   },
 
   {
-
     title: "裸足のシンデレラボーイ",
-
   },
 
   {
-
     title: "星をめざして",
-
   },
 
   {
-
     title: "Boom! Boom! POWER",
-
   },
 
   {
-
     title: "紅い花",
-
   },
 
   {
-
     title: "Best Friend",
-
   },
 
   {
-
     title: "愛のマタドール",
-
   },
 
   {
-
     title: "Change the World",
-
   },
 
   {
-
     title: "君想フ夜",
-
   },
 
   {
-
     title: "アリバイ",
-
   },
 
   {
-
     title: "チラリズム",
-
   },
 
   {
-
     title: "愛なんて",
-
   },
 
   {
-
     title: "なんとかなるさ",
-
   },
 
   {
-
     title: "真冬のナガレボシ",
-
   },
 
   {
-
     title: "その笑顔 僕に見せて",
-
   },
 
   {
-
     title: "weeeek",
-
   },
 
   {
-
     title: "with me",
-
   },
 
   {
-
     title: "Why",
-
   },
 
   {
-
     title: "Rainbow",
-
   },
 
   {
-
     title: "太陽のナミダ",
-
   },
 
   {
-
     title: "美しすぎてBeautiful Eyes",
-
   },
 
   {
-
     title: "バンビーナ",
-
   },
 
   {
-
     title: "Lady Spider",
-
   },
 
   {
-
     title: "SUMMER TIME",
-
   },
 
   {
-
     title: "EASY COME, EASY GO",
-
   },
 
   {
-
     title: "Liar",
-
   },
 
   {
-
     title: "Baby! Be My Baby!",
-
   },
 
   {
-
     title: "Happy Birthday",
-
   },
 
   {
-
     title: "ガンガンガンバッテ",
-
   },
 
   {
-
     title: "GAME of LOVE",
-
   },
 
   {
-
     title: "Push On!",
-
   },
 
   {
-
     title: "STARDUST",
-
   },
 
   {
-
     title: "SNOW EXPRESS",
-
   },
 
   {
-
     title: "Forever",
-
   },
 
   {
-
     title: "ケセナイ",
-
   },
 
   {
-
     title: "みんながいる世界をひとつに愛をもっとGive & Takeしましょう",
-
   },
 
   {
-
     title: "ムラリスト",
-
   },
 
   {
-
     title: "Smile Maker",
-
   },
 
   {
-
     title: "FLY AGAIN",
-
   },
 
   {
-
     title: "永遠色の恋",
-
   },
 
   {
-
     title: "恋のABO",
-
   },
 
   {
-
     title: "ラビリンス",
-
   },
 
   {
-
     title: "OPEN YOUR EYES",
-
   },
 
   {
-
     title: "さくらガール",
-
   },
 
   {
-
     title: "あなたがとなりにいるだけで",
-
   },
 
   {
-
     title: "Love Melodies",
-
   },
 
   {
-
     title: "FREEDOM",
-
   },
 
   {
-
     title: "LIVE",
-
   },
 
   {
-
     title: "生まれし君へ",
-
   },
 
   {
-
     title: "Supernatural",
-
   },
 
   {
-
     title: "秋の空",
-
   },
 
   {
-
     title: "2人/130000000の奇跡",
-
   },
 
   {
-
     title: "Dancin’ in the Secret",
-
   },
 
   {
-
     title: "ワンダーランド",
-
   },
 
   {
-
     title: "BE FUNKY!",
-
   },
 
   {
-
     title: "D.T.F",
-
   },
 
   {
-
     title: "内容の無い手紙",
-
   },
 
   {
-
     title: "エンドレス・サマー",
-
   },
 
   {
-
     title: "Share",
-
   },
 
   {
-
     title: "言いたいだけ",
-
   },
 
   {
-
     title: "Fighting Man",
-
   },
 
   {
-
     title: "ガムシャラCha Cha Cha",
-
   },
 
   {
-
     title: "Wake Up",
-
   },
 
   {
-
     title: "Winter Moon",
-
   },
 
   {
-
     title: "愛はシンプルなカレーライス",
-
   },
 
   {
-
     title: "チャンカパーナ",
-
   },
 
   {
-
     title: "フルスイング",
-
   },
 
   {
-
     title: "Starry",
-
   },
 
   {
-
     title: "ヴァンパイアはかく語りき",
-
   },
 
   {
-
     title: "PeekaBoo…",
-
   },
 
   {
-
     title: "Love Addiction",
-
   },
 
   {
-
     title: "Uri Sarang",
-
   },
 
   {
-
     title: "暁-AKATSUKI-",
-
   },
 
   {
-
     title: "Pumpkin",
-
   },
 
   {
-
     title: "SUPERMAN",
-
   },
 
   {
-
     title: "HAPPY MUSIC",
-
   },
 
   {
-
     title: "カカオ",
-
   },
 
   {
-
     title: "シャララタンバリン",
-
   },
 
   {
-
     title: "WORLD QUEST",
-
   },
 
   {
-
     title: "ポコポンペコーリャ",
-
   },
 
   {
-
     title: "Quntastic!",
-
   },
 
   {
-
     title: "36℃",
-
   },
 
   {
-
     title: "Hello",
-
   },
 
   {
-
     title: "ONE -for the win-",
-
   },
 
   {
-
     title: "SEVEN COLORS",
-
   },
 
   {
-
     title: "君がいた夏",
-
   },
 
   {
-
     title: "FLYING BIRD",
-
   },
 
   {
-
     title: "4＋FAN",
-
   },
 
   {
-
     title: "渚のお姉サマー",
-
   },
 
   {
-
     title: "恋祭り",
-
   },
 
   {
-
     title: "Greedier",
-
   },
 
   {
-
     title: "べサメ・ムーチョ〜狂おしいボレロ〜",
-
   },
 
   {
-
     title: "Dance in the dark",
-
   },
 
   {
-
     title: "HIGHER GROUND",
-
   },
 
   {
-
     title: "Beautiful Rain",
-
   },
 
   {
-
     title: "Dramacatcher",
-
   },
 
   {
-
     title: "Remedy",
-
   },
 
   {
-
     title: "CRY",
-
   },
 
   {
-
     title: "KAGUYA",
-
   },
 
   {
-
     title: "バタフライ",
-
   },
 
   {
-
     title: "TRAVeLiNG",
-
   },
 
   {
-
     title: "勿忘草",
-
   },
 
   {
-
     title: "TOP OF THE WORLD",
-
   },
 
   {
-
     title: "MR.WHITE",
-
   },
 
   {
-
     title: "NYARO",
-
   },
 
   {
-
     title: "Weather NEWS",
-
   },
 
   {
-
     title: "SuperSONIC",
-
   },
 
   {
-
     title: "BYAKUYA",
-
   },
 
   {
-
     title: "White Love Story",
-
   },
 
   {
-
     title: "愛言葉",
-
   },
 
   {
-
     title: "ロメオ2015",
-
   },
 
   {
-
     title: "Sky Beautiful",
-
   },
 
   {
-
     title: "ESCORT",
-
   },
 
   {
-
     title: "チュムチュム",
-
   },
 
   {
-
     title: "日はまた昇る",
-
   },
 
   {
-
     title: "メガロマニア",
-
   },
 
   {
-
     title: "Sweet Martini",
-
   },
 
   {
-
     title: "ささぶね",
-
   },
 
   {
-
     title: "四銃士",
-
   },
 
   {
-
     title: "ANTHEM",
-
   },
 
   {
-
     title: "永遠",
-
   },
 
   {
-
     title: "SPEAKER",
-
   },
 
   {
-
     title: "ヒカリノシズク",
-
   },
 
   {
-
     title: "Touch",
-
   },
 
   {
-
     title: "星の旅人たち",
-
   },
 
   {
-
     title: "whis・per",
-
   },
 
   {
-
     title: "QUARTETTO",
-
   },
 
   {
-
     title: "シリウス",
-
   },
 
   {
-
     title: "NEWSCHOOL",
-
   },
 
   {
-
     title: "Wonder",
-
   },
 
   {
-
     title: "ライフ",
-
   },
 
   {
-
     title: "Departure",
-
   },
 
+  {
     title: "LIS’N",
-
   },
 
   {
-
     title: "愛のエレジー",
-
   },
 
   {
-
     title: "星の王子さま",
-
   },
 
   {
-
     title: "恋を知らない君へ",
-
   },
 
   {
-
     title: "Smile",
-
   },
 
   {
-
     title: "サマラバ",
-
   },
 
   {
-
     title: "Distance",
-
   },
 
   {
-
     title: "EMMA",
-
   },
 
   {
-
     title: "Snow Dance",
-
   },
 
   {
-
     title: "スノードロップ",
-
   },
 
   {
-
     title: "NEVERLAND",
-
   },
 
   {
-
     title: "アン・ドゥ・トロワ",
-
   },
 
   {
-
     title: "Brightest",
-
   },
 
   {
-
     title: "Silent Love",
-
   },
 
   {
-
     title: "ミステリア",
-
   },
 
   {
-
     title: "BLACK FIRE",
-
   },
 
   {
-
     title: "ORIHIME",
-
   },
 
   {
-
     title: "流れ星",
-
   },
 
   {
-
     title: "U R not alone",
-
   },
 
   {
-
     title: "ニャン太",
-
   },
 
   {
-
     title: "あやめ",
-
   },
 
   {
-
     title: "FOREVER MINE",
-
   },
 
   {
-
     title: "LPS",
-
   },
 
   {
-
     title: "NEWSICAL",
-
   },
 
   {
-
     title: "madoromi",
-
   },
 
   {
-
     title: "EPCOTIA",
-
   },
 
   {
-
     title: "KINGDOM",
-
   },
 
   {
-
     title: "TWINKLE STAR",
-
   },
 
   {
-
     title: "恋する惑星",
-
   },
 
   {
-
     title: "JUMPAROUND",
-
   },
 
   {
-
     title: "AVALON",
-
   },
 
   {
-
     title: "IT'S YOU",
-
   },
 
   {
-
     title: "UFO",
-
   },
 
   {
-
     title: "EROTICA",
-
   },
 
   {
-
     title: "BLACKHOLE",
-
   },
 
   {
-
     title: "星に願いを",
-
   },
 
   {
-
     title: "イノセンス",
-
   },
 
   {
-
     title: "HAPPY ENDING",
-
   },
 
   {
-
     title: "銀座ラプソディ",
-
   },
 
   {
-
     title: "氷温",
-
   },
 
   {
-
     title: "Thunder",
-
   },
 
   {
-
     title: "BLUE",
-
   },
 
   {
-
     title: "Cascade",
-
   },
 
   {
-
     title: "夜よ踊れ",
-
   },
 
   {
-
     title: "「生きろ」",
-
   },
 
   {
-
     title: "Bring Back the Summer",
-
   },
 
   {
-
     title: "LVE",
-
   },
 
   {
-
     title: "Strawberry",
-
   },
 
   {
-
     title: "WORLDISTA",
-
   },
 
   {
-
     title: "DEAD END",
-
   },
 
   {
-
     title: "CASINO DRIVE",
-
   },
 
   {
-
     title: "インビジブル ダンジョン",
-
   },
 
   {
-
     title: "SPIRIT",
-
   },
 
   {
-
     title: "FIGHTERS.COM",
-
   },
 
   {
-
     title: "Digital Love",
-
   },
 
   {
-
     title: "リボン",
-
   },
 
   {
-
     title: "サンタのいないクリスマス",
-
   },
 
   {
-
     title: "Symphony of Dissonance",
-
   },
 
   {
-
     title: "Going that way",
-
   },
 
   {
-
     title: "世界",
-
   },
 
   {
-
     title: "トップガン",
-
   },
 
   {
-
     title: "Love Story",
-
   },
 
   {
-
     title: "Dragonism",
-
   },
 
   {
-
     title: "STORY",
-
   },
 
   {
-
     title: "SEVEN",
-
   },
 
   {
-
     title: "SUPERSTAR",
-
   },
 
   {
-
     title: "何度でも",
-
   },
 
   {
-
     title: "STAY WITH ME",
-
   },
 
   {
-
     title: "Perfect Lover",
-
   },
 
   {
-
     title: "エス",
-
   },
 
   {
-
     title: "君の言葉に笑みを",
-
   },
 
   {
-
     title: "クローバー",
-
   },
 
   {
-
     title: "NEW STORY",
-
   },
 
   {
-
     title: "戀",
-
   },
 
   {
-
     title: "Narrative",
-
   },
 
   {
-
     title: "STAY ALIVE",
-
   },
 
   {
-
     title: "ビューティフル",
-
   },
 
   {
-
     title: "チンチャうまっか",
-
   },
 
   {
-
     title: "カナリヤ",
-
   },
 
   {
-
     title: "CHANGES",
-
   },
 
   {
-
     title: "朧月",
-
   },
 
   {
-
     title: "Champagne Gold",
-
   },
 
   {
-
     title: "BURN",
-
   },
 
   {
-
     title: "鳴神舞",
-
   },
 
   {
-
     title: "神様になりたいわけじゃない",
-
   },
 
   {
-
     title: "FLY HIGH",
-
   },
 
   {
-
     title: "未来へ",
-
   },
 
   {
-
     title: "ReBorn",
-
   },
 
   {
-
     title: "Future is Here",
-
   },
 
   {
-
     title: "JUNK",
-
   },
 
   {
-
     title: "Running",
-
   },
 
   {
-
     title: "小さなクリスマス",
-
   },
 
   {
-
     title: "LOSER",
-
   },
 
   {
-
     title: "三銃士",
-
   },
 
   {
-
     title: "[0,0,0]",
-
   },
 
   {
-
     title: "CANVAS",
-
   },
 
   {
-
     title: "TOKYO SUMMER",
-
   },
 
   {
-
     title: "Deeper & Deeper",
-
   },
 
   {
-
     title: "TRIAD",
-
   },
 
   {
-
     title: "カノン",
-
   },
 
   {
-
     title: "ポリリズム",
-
   },
 
   {
-
     title: "pink moon",
-
   },
 
   {
-
     title: "KMK the boys rock you all!",
-
   },
 
   {
-
     title: "走れメロスのように",
-
   },
 
   {
-
     title: "Coda",
-
   },
 
   {
-
     title: "Refrain",
-
   },
 
   {
-
     title: "XXX",
-
   },
 
   {
-
     title: "Agitato",
-
   },
 
   {
-
     title: "A Real Man",
-
   },
 
   {
-
     title: "Tick-Tock",
-
   },
 
   {
-
     title: "ハレルヤ",
-
   },
 
   {
-
     title: "メモリーズ",
-
   },
 
   {
-
     title: "白",
-
   },
 
   {
-
     title: "フィナーレ",
-
   },
 
   {
-
     title: "エンターテインメント",
-
   },
 
   {
-
     title: "ストレンジャー",
-
   },
 
   {
-
     title: "Alien",
-
   },
 
   {
-
     title: "チューイングガム",
-
   },
 
   {
-
     title: "Different Lives",
-
   },
 
   {
-
     title: "100年前から",
-
   },
 
   {
-
     title: "二枚舌を今夜絡ませる",
-
   },
 
   {
-
     title: "Haqqy",
-
   },
 
   {
-
     title: "We are Team NEWS",
-
   },
 
   {
-
     title: "劇伴",
-
   },
 
   {
-
     title: "ミカエリビジン",
-
   },
 
   {
-
     title: "人情心中",
-
   },
 
   {
-
     title: "hanami",
-
   },
 
   {
-
     title: "ギフテッド",
-
   },
 
   {
-
     title: "ROOOTS",
-
   },
 
   {
-
     title: "アンチフレンチキス",
-
   },
 
   {
-
     title: "ジキルとハイド",
-
   },
 
   {
-
     title: "熱帯夜",
-
   },
 
   {
-
     title: "幸福論",
-
   },
 
   {
-
     title: "JAPANEWS",
-
   },
 
   {
-
     title: "FIREWORKS",
-
   },
 
   {
-
     title: "おもちですか！",
-
   },
 
   {
-
     title: "origami",
-
   },
 
   {
-
     title: "Cherry Blossom Girl",
-
   },
 
   {
-
     title: "JANGARA",
-
   },
 
   {
-
     title: "うらめしや",
-
   },
 
   {
-
     title: "日出づる処",
-
   },
 
   {
-
     title: "カランコロン",
-
   },
 
   {
-
     title: "almond",
-
   },
 
   {
-
     title: "kawaii",
-
   },
 
   {
-
     title: "あっちむいてほい",
-
   },
 
   {
+    title: "BAD",
+  },
 
+  {
+    title: "AI AI AI",
+  },
+
+  {
+    title: "LOST & FOUND",
+  },
+
+  {
+    title: "レプリカ",
+  },
+
+  {
     title: "Chankapana(English Version)",
-
   },
 
   {
-
     title: "変身",
-
   },
 
   {
-
     title: "JOYER",
-
   },
 
   {
-
     title: "ドライアイス.zip",
-
   },
 
   {
-
     title: "WHAT’S NEW",
-
   },
 
   {
-
     title: "ごめんあそばせ",
-
   },
 
   {
-
     title: "ラブとラブ",
-
   },
-
   
-
   {
-
     title: "君のままで",
-
   },
 
   {
-
     title: "CHOIYAMA",
-
   },
 
   {
-
     title: "Cocoon",
-
   },
 
   {
-
     title: "TM",
-
   },
 
   {
-
     title: "KMK",
-
   },
 
   {
-
     title: "WE ARE NEWS - Episode１-",
-
   },
 
   {
-
     title: "The boys rock you all!",
-
   },
 
   {
-
     title: "TokinoHazama",
-
   },
 
   {
-
     title: "恋空",
-
   },
 
   {
-
     title: "たたた",
-
   },
 
   {
-
     title: "オニサンコチラ",
-
   },
 
   {
-
     title: "サマーサイダー",
-
   },
 
   {
-
     title: "エール",
-
   },
 
   {
-
     title: "DROP",
-
   },
 
   {
-
     title: "Lost in the rain…",
-
   },
 
   {
-
     title: "Hands",
-
   },
+
 
 ];
 
 // ========================================
-
 // 楽曲ソート
-
 // ========================================
 
 const SONGS_PER_PAGE = 10;
-
 const MAX_RESULT = 20;
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzaAsfhPPGvDqp-QSa-UpOQsNnqfOs7cMloBxk-7ixlw9klQQoYfg8sQGIJNDDAj90EVQ/exec";
 
 let resultSent = false;
 
+
 // ========================================
-
 // HTML要素
-
 // ========================================
 
 const memberScreen =
@@ -2140,6 +1500,7 @@ function renderQualifier() {
     checkbox.checked =
       selectedSongs.includes(song);
 
+
     const title =
       document.createElement("span");
 
@@ -2188,6 +1549,7 @@ function renderQualifier() {
 
       }
     );
+
 
     songList.appendChild(label);
   }
@@ -2331,6 +1693,7 @@ function startFinal() {
     return;
   }
 
+
   // --------------------------------
   // 1曲
   // --------------------------------
@@ -2367,6 +1730,7 @@ function startFinal() {
 
   showComparison();
 }
+
 
 // ========================================
 // 本選の比較画面
@@ -2434,6 +1798,7 @@ function showComparison() {
   finalProgress.textContent =
     `本選：${currentSongIndex + 1} / ${selectedSongs.length}曲目を順位付け中`;
 }
+
 
 // ========================================
 // 本選
@@ -2554,6 +1919,7 @@ function showResult() {
     return;
   }
 
+
   // --------------------------------
   // 表示する曲数
   // --------------------------------
@@ -2594,6 +1960,7 @@ function showResult() {
 
     number.textContent =
       `${i + 1}.`;
+
 
     const title =
       document.createElement("span");
@@ -2713,6 +2080,7 @@ const shareResultTitle =
 const shareRanking =
   document.getElementById("share-ranking");
 
+
 // ========================================
 // テーマ情報
 // ========================================
@@ -2755,6 +2123,8 @@ function getShareTheme() {
     member: "選べない"
   };
 }
+
+
 // ========================================
 // 結果画像を作成
 // ========================================
@@ -2804,6 +2174,12 @@ function createResultImage() {
     const item =
       document.createElement("div");
 
+    item.className =
+      "share-ranking-item";
+
+
+    const number =
+      document.createElement("div");
 
     number.className =
       "share-ranking-number";
@@ -2847,6 +2223,7 @@ function createResultImage() {
     }
   );
 }
+
 
 // ========================================
 // 画像を保存
@@ -2914,6 +2291,7 @@ saveImageButton.addEventListener(
   }
 );
 
+
 // ========================================
 // Xでシェア
 // ========================================
@@ -2961,7 +2339,6 @@ shareXButton.addEventListener(
             await navigator.share({
 
               files: [file],
-
 
               title:
                 "楽曲ソート結果",
