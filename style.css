@@ -734,12 +734,12 @@ body.theme-none #restart-button {
   text-align: center;
 }
 
-/* 曲名：現在の15px → 3倍の45px */
+/* 曲名：現在の15px → 1.5倍の25px */
 #song-list .song-name {
   display: block;
   width: 100%;
 
-  font-size: 45px;
+  font-size: 25px;
   font-weight: bold;
   line-height: 1.15;
 
